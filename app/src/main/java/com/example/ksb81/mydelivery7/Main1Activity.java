@@ -69,10 +69,10 @@ public class Main1Activity extends AppCompatActivity {
         Adapter2.notifyDataSetChanged();
 
         //7번 페이지에서 받아온 택배 정보 추가
-        Intent intent7 = new Intent();
-        String postname = intent7.getStringExtra("postname");
-        String postnum = intent7.getStringExtra("postnum");
-        String postcompany = intent7.getStringExtra("postcompany");
+        Intent intent8 = getIntent();
+        String postname = intent8.getStringExtra("postname");
+        String postnum = intent8.getStringExtra("postnum");
+        String postcompany = intent8.getStringExtra("postcompany");
 
         if(postname != null && postnum != null) {
             ds1.add(new MyItem(postname, null, null, null, "배송중",postcompany));
